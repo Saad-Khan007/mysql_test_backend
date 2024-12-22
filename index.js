@@ -6,7 +6,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 // Initialize Express app
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Middleware
 app.use(bodyParser.json());
