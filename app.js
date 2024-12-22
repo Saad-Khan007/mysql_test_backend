@@ -62,6 +62,10 @@ app.post('/todos', (req, res) => {
 });
 
 // Read all to-dos
+app.get('/', (req, res) => {
+    res.status(200).send('Welcome to the MySQL Backend Project');
+});
+
 app.get('/todos', (req, res) => {
     const query = 'SELECT * FROM todos';
     db.query(query, (err, results) => {
